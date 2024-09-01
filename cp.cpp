@@ -8,51 +8,24 @@ using namespace std;
 int main()
 
 {
-    fast
-    int n;
-    cin>>n;
-    deque<int>dq;
-    for (int i=0;i<n;i++)
+    fast   
+    map<int,int>mp;
+    for (int i=1;i<=4;i++)
     {
         int x;
         cin>>x;
-        dq.push_back(x);
+        mp.insert({i,x});
     }
-    int sere=0,dima=0;
-    bool turn=0;
-    for (int i=0;i<n;i++)
+    string s;
+    cin>>s;
+    int cal=0;
+    for (int i=0;i<s.size();i++)
     {
-        if (dq.front()>dq.back())
-        {
-            if (!turn)
-            {
-                sere+=dq.front();
-                turn=1;
-            }
-            else 
-            {
-                dima+=dq.front();
-                turn=0;
-            }
-            dq.pop_front();
-        }
-        else 
-        {
-            if (!turn)
-            {
-                sere+=dq.back();
-                turn=1;
-            }
-            else 
-            {
-                dima+=dq.back();
-                turn=0;
-            }
-            dq.pop_back();
-        }
+       // cout<<mp[s[i]]<<" ";
+        s[i]-=48;
+        cal+=mp[s[i]];
     }
-    cout<<sere<<" "<<dima;
-    
+    cout<<cal;
     return 0;
 }
 
