@@ -21,7 +21,6 @@ int main()
     int cal=0;
     for (int i=0;i<s.size();i++)
     {
-       // cout<<mp[s[i]]<<" ";
         s[i]-=48;
         cal+=mp[s[i]];
     }
