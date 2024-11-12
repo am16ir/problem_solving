@@ -4,27 +4,23 @@
 typedef long long ll;
 using namespace std;
 
-
 int main()
 
 {
-    fast   
-    map<int,int>mp;
-    for (int i=1;i<=4;i++)
-    {
-        int x;
-        cin>>x;
-        mp.insert({i,x});
+    fast  
+    int t;
+    cin>>t;
+    while (t--){
+        int n,sum=0,sq=0;
+        cin>>n;
+        for (int i=0;i<n;i++){
+            int x;
+            cin>>x;
+            sum+=x;
+        }
+        sq=sqrt(sum);
+        cout<<sq;        
     }
-    string s;
-    cin>>s;
-    int cal=0;
-    for (int i=0;i<s.size();i++)
-    {
-        s[i]-=48;
-        cal+=mp[s[i]];
-    }
-    cout<<cal;
     return 0;
 }
 
